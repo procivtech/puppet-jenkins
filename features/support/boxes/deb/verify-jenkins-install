@@ -6,7 +6,7 @@ unless File.exists? '/etc/init.d/jenkins'
   exit 1
 end
 
-unless File.exists? '/var/lib/jenkins'
+unless File.exists? '/mnt/data/jenkins'
   puts 'Jenkins home directory does not exist'
   exit 1
 end

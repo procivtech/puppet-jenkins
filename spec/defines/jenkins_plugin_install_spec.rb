@@ -11,8 +11,8 @@ describe 'jenkins::plugin::install' do
     end
     it { should contain_user('jenkins') }
     it { should contain_group('jenkins') }
-    it { should contain_file('/var/lib/jenkins') }
-    it { should contain_file('/var/lib/jenkins/plugins') }
+    it { should contain_file('/mnt/data/jenkins') }
+    it { should contain_file('/mnt/data/jenkins/plugins') }
     it { should contain_exec('download-git') }
   end
   describe "on Debian" do
@@ -21,8 +21,8 @@ describe 'jenkins::plugin::install' do
     end
     it { should contain_user('jenkins') }
     it { should contain_group('jenkins') }
-    it { should contain_file('/var/lib/jenkins') }
-    it { should contain_file('/var/lib/jenkins/plugins') }
+    it { should contain_file('/mnt/data/jenkins') }
+    it { should contain_file('/mnt/data/jenkins/plugins') }
     it { should contain_exec('download-git') }
   end
 end

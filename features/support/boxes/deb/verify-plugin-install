@@ -5,7 +5,7 @@ if ARGV.first.nil?
   exit 1
 end
 
-unless File.exists? "/var/lib/jenkins/plugins/#{ARGV.first}.hpi"
+unless File.exists? "/mnt/data/jenkins/plugins/#{ARGV.first}.hpi"
   puts "#{ARGV.first}.hpi does not exist"
   exit 1
 end
